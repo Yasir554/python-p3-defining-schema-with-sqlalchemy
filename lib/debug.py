@@ -1,10 +1,11 @@
+# lib/sqlalchemy_sandbox.py
+
 #!/usr/bin/env python3
 
+# imports
 from sqlalchemy import create_engine
 
-from sqlalchemy_sandbox import Student
+# data models
 
 engine = create_engine('sqlite:///students.db')
-
-if __name__ == '__main__':
-    import ipdb; ipdb.set_trace()
+Base.metadata.create_all(engine)
